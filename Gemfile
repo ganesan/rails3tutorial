@@ -30,10 +30,18 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # end
 
 
-group :development do
-  gem 'rspec-rails', '2.0.0.beta.18'
-end
+# group :development do
+#   gem 'rspec-rails', '2.0.0.beta.18'
+# end
+# 
+# group :test do
+#   gem 'rspec', '2.0.0.beta.18'
+#   gem 'spork', '0.8.4'
+# end
 
-group :test do
-  gem 'rspec', '2.0.0.beta.18'
+group :development, :test do
+  gem 'rspec-rails' , '>= 2.0.0.beta.20'
+  gem 'cucumber-rails' ,'>= 0.3.2'
+  gem 'webrat' , '>= 0.7.2.beta.1'
+  gem 'rspec', '2.0.0.beta.20'
 end
